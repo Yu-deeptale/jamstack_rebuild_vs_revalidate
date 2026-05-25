@@ -1,0 +1,20 @@
+{
+  "name": "jamstack_rebuild_vs_revalidate",
+  "version": "1.0.0",
+  "description": "本研究ではJamstack運用における更新戦略（全体再ビルド vs オンデマンド再検証）を比較する。",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
+}
