@@ -8,17 +8,16 @@ module.exports = {
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
     apiKey: process.env.MICROCMS_API_KEY,
     endpoint: 'posts',
-    // テスト用記事スラッグ（この 2 つを交互に更新）
-    testSlugs: [
-      'ticket-Autumn2026',
-      'ticket-summer2026'
+    // テスト用記事 ID（この 2 つを交互に更新）
+    testArticleIds: [
+      'sl0j3_4uf6',        // ticket-Autumn2026
+      'ticket-summer2026'  // ticket-summer2026
     ],
   },
 
   // Netlify 設定
   netlify: {
-    siteId: '49da18ca-643e-4610-84de-a6c430d3cc77', // 正しい Site ID
-    siteId: '49da18ca-643e-4610-84de-a6c430d3cc77', // syssemijam
+    siteId: '49da18ca-643e-4610-84de-a6c430d3cc77',
     accessToken: process.env.NETLIFY_ACCESS_TOKEN,
     apiBaseUrl: 'https://api.netlify.com/api/v1',
   },
