@@ -17,7 +17,7 @@ module.exports = {
 
   // Netlify 設定
   netlify: {
-    siteId: 'b1f61f5f-e2d4-4cbb-9f6c-3b8f0f9e2d4c', // syssemijam
+    siteId: '49da18ca-643e-4610-84de-a6c430d3cc77', // syssemijam
     accessToken: process.env.NETLIFY_ACCESS_TOKEN,
     apiBaseUrl: 'https://api.netlify.com/api/v1',
   },
