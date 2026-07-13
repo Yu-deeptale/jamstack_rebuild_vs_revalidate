@@ -13,12 +13,12 @@ const NETLIFY_API = config.netlify.apiBaseUrl;
 /**
  * microCMS の記事を更新
  */
-async function updateArticle(slug, testNumber) {
+async function updateArticle(articleId, testNumber) {
   const timestamp = new Date().toISOString();
   const content = `測定開始: ${timestamp} (Test #${testNumber})`;
 
   try {
-    const response = await fetch(`${MICROCMS_API}/${config.microcms.endpoint}/${slug}`, {
+    const response = await fetch(`${MICROCMS_API}/${config.microcms.endpoint}/${articleId}`, {
       method: 'PUT',
       headers: {
         'X-MICROCMS-API-KEY': config.microcms.apiKey,
@@ -35,7 +35,7 @@ async function updateArticle(slug, testNumber) {
 
     return { timestamp, content };
   } catch (error) {
-    console.error(`❌ Failed to update article (${slug}):`, error.message);
+    console.error(`❌ Failed to update article (${articleId}):`, error.message);
     throw error;
   }
 }
@@ -99,12 +99,12 @@ async function waitForBuildCompletion(initialBuildId, timeout = config.measureme
 /**
  * Step1: オンデマンド再検証を計測
  */
-async function measureStep1(slug, testNumber) {
+async function measureStep1(articleId, testNumber) {
   console.log(`\n📊 [Step1] Test #${testNumber} - On-Demand Revalidation`);
-  console.log(`   Slug: ${slug}`);
+  console.log(`   Article ID: ${articleId}`);
 
   const updateStartTime = Date.now();
-  const { timestamp: updateTime } = await updateArticle(slug, testNumber);
+  const { timestamp: updateTime } = await updateArticle(articleId, testNumber);
 
   console.log(`   📝 Article updated at: ${updateTime}`);
 
@@ -121,7 +121,7 @@ async function measureStep1(slug, testNumber) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        contents: [{ slug }],
+        contents: [{ id: articleId }],
       }),
     });
 
@@ -135,7 +135,7 @@ async function measureStep1(slug, testNumber) {
     return {
       method: 'Step1',
       testNumber,
-      slug,
+      articleId,
       updateTime,
       revalidateDuration,
       success: true,
@@ -145,7 +145,7 @@ async function measureStep1(slug, testNumber) {
     return {
       method: 'Step1',
       testNumber,
-      slug,
+      articleId,
       updateTime,
       revalidateDuration: -1,
       success: false,
@@ -157,11 +157,11 @@ async function measureStep1(slug, testNumber) {
 /**
  * Step2: フル再ビルドを計測
  */
-async function measureStep2(slug, testNumber) {
+async function measureStep2(articleId, testNumber) {
   console.log(`\n📊 [Step2] Test #${testNumber} - Full Rebuild`);
-  console.log(`   Slug: ${slug}`);
+  console.log(`   Article ID: ${articleId}`);
 
-  const { timestamp: updateTime } = await updateArticle(slug, testNumber);
+  const { timestamp: updateTime } = await updateArticle(articleId, testNumber);
 
   console.log(`   📝 Article updated at: ${updateTime}`);
 
@@ -178,7 +178,7 @@ async function measureStep2(slug, testNumber) {
     return {
       method: 'Step2',
       testNumber,
-      slug,
+      articleId,
       updateTime,
       buildDuration: duration,
       success: true,
@@ -188,7 +188,7 @@ async function measureStep2(slug, testNumber) {
     return {
       method: 'Step2',
       testNumber,
-      slug,
+      articleId,
       updateTime,
       buildDuration: -1,
       success: false,
@@ -214,12 +214,12 @@ function appendResultsToCsv(results) {
 
   let csvContent = '';
   if (!hasHeader) {
-    csvContent = 'Method,Test#,Slug,Update Time,Duration(ms),Success,Note\n';
+    csvContent = 'Method,Test#,Article ID,Update Time,Duration(ms),Success,Note\n';
   }
 
   results.forEach((result) => {
     const duration = result.revalidateDuration ?? result.buildDuration;
-    const row = `${result.method},${result.testNumber},${result.slug},${result.updateTime},${duration},${result.success},${result.error || ''}`;
+    const row = `${result.method},${result.testNumber},${result.articleId},${result.updateTime},${duration},${result.success},${result.error || ''}`;
     csvContent += row + '\n';
   });
 
@@ -241,22 +241,22 @@ async function main() {
   console.log('='.repeat(60));
 
   const testCount = config.measurement.testCount;
-  const slugs = config.microcms.testSlugs;
+  const articleIds = config.microcms.testArticleIds;
   const allResults = [];
 
   for (let i = 1; i <= testCount; i++) {
-    const slugIndex = (i - 1) % slugs.length;
-    const slug = slugs[slugIndex];
+    const articleIndex = (i - 1) % articleIds.length;
+    const articleId = articleIds[articleIndex];
 
     // Step1 と Step2 を交互に実行
     const isStep1 = i % 2 === 1;
 
     try {
       if (isStep1) {
-        const result = await measureStep1(slug, i);
+        const result = await measureStep1(articleId, i);
         allResults.push(result);
       } else {
-        const result = await measureStep2(slug, i);
+        const result = await measureStep2(articleId, i);
         allResults.push(result);
       }
     } catch (error) {
