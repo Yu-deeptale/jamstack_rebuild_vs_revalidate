@@ -11,7 +11,7 @@ const MICROCMS_API = `https://${config.microcms.serviceDomain}.microcms.io/api/v
 const NETLIFY_API = config.netlify.apiBaseUrl;
 
 /**
- * microCMS の記事を更新
+ * microCMS の記事を更新（PATCH を使用）
  */
 async function updateArticle(articleId, testNumber) {
   const timestamp = new Date().toISOString();
@@ -19,7 +19,7 @@ async function updateArticle(articleId, testNumber) {
 
   try {
     const response = await fetch(`${MICROCMS_API}/${config.microcms.endpoint}/${articleId}`, {
-      method: 'PUT',
+      method: 'PATCH',
       headers: {
         'X-MICROCMS-API-KEY': config.microcms.apiKey,
         'Content-Type': 'application/json',
@@ -30,7 +30,8 @@ async function updateArticle(articleId, testNumber) {
     });
 
     if (!response.ok) {
-      throw new Error(`Failed to update article: ${response.status}`);
+      const errorText = await response.text();
+      throw new Error(`Failed to update article: ${response.status} - ${errorText}`);
     }
 
     return { timestamp, content };
