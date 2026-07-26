@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 計測設定ファイル
  */
 
@@ -15,16 +15,18 @@ module.exports = {
     ],
   },
 
-  // Netlify 設定
-  netlify: {
-    siteId: '49da18ca-643e-4610-84de-a6c430d3cc77',
-    accessToken: process.env.NETLIFY_ACCESS_TOKEN,
-    apiBaseUrl: 'https://api.netlify.com/api/v1',
+  // Cloudflare Pages 設定
+  cloudflare: {
+    accountId: '424f0f1d33ba71bc0745e8570dbb8737',
+    zoneId: process.env.CLOUDFLARE_ZONE_ID,
+    apiToken: process.env.CLOUDFLARE_API_TOKEN,
+    apiBaseUrl: 'https://api.cloudflare.com/client/v4',
+    deployHookUrl: process.env.CLOUDFLARE_DEPLOY_HOOK_URL,
   },
 
   // 再検証 API 設定
   revalidateApi: {
-    url: 'https://syssemijam.netlify.app/api/revalidate',
+    url: 'https://sys-jamstack.pages.dev/api/revalidate',
   },
 
   // 計測設定

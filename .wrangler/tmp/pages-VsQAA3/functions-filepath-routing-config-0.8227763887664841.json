@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "routePath": "/api/revalidate",
+      "mountPath": "/api",
+      "method": "GET",
+      "module": [
+        "api/revalidate.ts:onRequestGet"
+      ]
+    },
+    {
+      "routePath": "/api/revalidate",
+      "mountPath": "/api",
+      "method": "POST",
+      "module": [
+        "api/revalidate.ts:onRequestPost"
+      ]
+    }
+  ],
+  "baseURL": "/"
+}

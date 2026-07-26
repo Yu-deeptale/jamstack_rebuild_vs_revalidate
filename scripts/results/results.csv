@@ -1,0 +1,96 @@
+Method,Test#,Article ID,Update Time,Duration(ms),Success,Note
+Step1,1,sl0j3_4uf6,2026-07-26T00:04:33.712Z,80,true,
+Step1,3,sl0j3_4uf6,2026-07-26T00:04:42.967Z,37,true,
+Step1,5,sl0j3_4uf6,2026-07-26T00:04:52.095Z,59,true,
+Step1,7,sl0j3_4uf6,2026-07-26T00:05:00.967Z,36,true,
+Step1,9,sl0j3_4uf6,2026-07-26T00:05:10.033Z,38,true,
+Step1,1,sl0j3_4uf6,2026-07-26T00:14:02.548Z,57,true,
+Step1,3,sl0j3_4uf6,2026-07-26T00:14:11.870Z,37,true,
+Step1,5,sl0j3_4uf6,2026-07-26T00:14:21.590Z,36,true,
+Step1,7,sl0j3_4uf6,2026-07-26T00:14:30.585Z,38,true,
+Step1,9,sl0j3_4uf6,2026-07-26T00:14:39.552Z,43,true,
+Step1,1,sl0j3_4uf6,2026-07-26T02:43:51.408Z,65,true,
+Step1,3,sl0j3_4uf6,2026-07-26T02:44:00.347Z,40,true,
+Step1,5,sl0j3_4uf6,2026-07-26T02:44:08.735Z,44,true,
+Step1,7,sl0j3_4uf6,2026-07-26T02:44:17.050Z,39,true,
+Step1,9,sl0j3_4uf6,2026-07-26T02:44:25.085Z,40,true,
+Step1,1,sl0j3_4uf6,2026-07-26T06:27:40.860Z,68,true,
+Step2,2,ticket-summer2026,2026-07-26T06:27:45.935Z,320,true,
+Step1,3,sl0j3_4uf6,2026-07-26T06:27:51.613Z,44,true,
+Step2,4,ticket-summer2026,2026-07-26T06:27:56.885Z,313,true,
+Step1,5,sl0j3_4uf6,2026-07-26T06:28:02.763Z,52,true,
+Step2,6,ticket-summer2026,2026-07-26T06:28:08.150Z,331,true,
+Step1,7,sl0j3_4uf6,2026-07-26T06:28:13.722Z,54,true,
+Step2,8,ticket-summer2026,2026-07-26T06:28:18.594Z,276,true,
+Step1,9,sl0j3_4uf6,2026-07-26T06:28:24.668Z,59,true,
+Step2,10,ticket-summer2026,2026-07-26T06:28:29.656Z,318,true,
+Step1,1,sl0j3_4uf6,2026-07-26T08:08:46.977Z,80,,,true,
+Step2,2,ticket-summer2026,2026-07-26T08:08:52.099Z,229,229,,true,
+Step1,3,sl0j3_4uf6,2026-07-26T08:08:57.471Z,60,,,true,
+Step2,4,ticket-summer2026,2026-07-26T08:09:02.264Z,318,317,,true,
+Step1,5,sl0j3_4uf6,2026-07-26T08:09:08.239Z,52,,,true,
+Step2,6,ticket-summer2026,2026-07-26T08:09:13.231Z,225,224,,true,
+Step1,7,sl0j3_4uf6,2026-07-26T08:09:18.904Z,40,,,true,
+Step2,8,ticket-summer2026,2026-07-26T08:09:24.586Z,226,226,,true,
+Step1,9,sl0j3_4uf6,2026-07-26T08:09:30.769Z,36,,,true,
+Step2,10,ticket-summer2026,2026-07-26T08:09:35.850Z,322,321,,true,
+Step1,1,sl0j3_4uf6,2026-07-26T08:11:22.736Z,49,,,true,
+Step2,2,ticket-summer2026,2026-07-26T08:11:28.494Z,-1,,,false,Latest deployment failed (build:failure)
+Step1,3,sl0j3_4uf6,2026-07-26T08:11:40.004Z,41,,,true,
+Step2,4,ticket-summer2026,2026-07-26T08:11:45.081Z,-1,,,false,Latest deployment failed (build:failure)
+Step1,5,sl0j3_4uf6,2026-07-26T08:11:55.933Z,40,,,true,
+Step2,6,ticket-summer2026,2026-07-26T08:12:01.057Z,-1,,,false,Latest deployment failed (build:failure)
+Step1,7,sl0j3_4uf6,2026-07-26T08:12:11.953Z,41,,,true,
+Step2,8,ticket-summer2026,2026-07-26T08:12:16.624Z,-1,,,false,Latest deployment failed (build:failure)
+Step1,9,sl0j3_4uf6,2026-07-26T08:12:32.934Z,47,,,true,
+Step2,10,ticket-summer2026,2026-07-26T08:12:38.023Z,-1,,,false,Latest deployment failed (build:failure)
+Step1,1,sl0j3_4uf6,2026-07-26T09:17:46.691Z,103,,,true,
+Step2,2,ticket-summer2026,2026-07-26T09:17:52.269Z,-1,,,false,Latest deployment failed (build:failure)
+Step1,3,sl0j3_4uf6,2026-07-26T09:18:03.152Z,55,,,true,
+Step2,4,ticket-summer2026,2026-07-26T09:18:08.139Z,-1,,,false,Latest deployment failed (build:failure)
+Step1,5,sl0j3_4uf6,2026-07-26T09:18:19.036Z,45,,,true,
+Step2,6,ticket-summer2026,2026-07-26T09:18:24.112Z,-1,,,false,Latest deployment failed (build:failure)
+Step1,7,sl0j3_4uf6,2026-07-26T09:18:40.329Z,39,,,true,
+Step2,8,ticket-summer2026,2026-07-26T09:18:45.309Z,-1,,,false,Latest deployment failed (build:failure)
+Step1,9,sl0j3_4uf6,2026-07-26T09:18:56.247Z,41,,,true,
+Step2,10,ticket-summer2026,2026-07-26T09:19:01.388Z,-1,,,false,Latest deployment failed (build:failure)
+Step1,1,sl0j3_4uf6,2026-07-26T09:23:33.480Z,60,,,true,
+Step2,2,ticket-summer2026,2026-07-26T09:23:38.380Z,-1,,,false,Cloudflare Pages build command is empty. Set build command to "npm ci && npm run build" in the Pages project settings.
+Step1,3,sl0j3_4uf6,2026-07-26T09:23:41.380Z,42,,,true,
+Step2,4,ticket-summer2026,2026-07-26T09:23:46.190Z,-1,,,false,Cloudflare Pages build command is empty. Set build command to "npm ci && npm run build" in the Pages project settings.
+Step1,5,sl0j3_4uf6,2026-07-26T09:23:49.197Z,40,,,true,
+Step2,6,ticket-summer2026,2026-07-26T09:23:54.082Z,-1,,,false,Cloudflare Pages build command is empty. Set build command to "npm ci && npm run build" in the Pages project settings.
+Step1,7,sl0j3_4uf6,2026-07-26T09:23:57.083Z,36,,,true,
+Step2,8,ticket-summer2026,2026-07-26T09:24:01.951Z,-1,,,false,Cloudflare Pages build command is empty. Set build command to "npm ci && npm run build" in the Pages project settings.
+Step1,9,sl0j3_4uf6,2026-07-26T09:24:04.963Z,41,,,true,
+Step2,10,ticket-summer2026,2026-07-26T09:24:09.664Z,-1,,,false,Cloudflare Pages build command is empty. Set build command to "npm ci && npm run build" in the Pages project settings.
+Step1,1,sl0j3_4uf6,2026-07-26T09:31:36.993Z,54,,,true,
+Step2,2,ticket-summer2026,2026-07-26T09:31:42.094Z,48198,3731,38499,true,
+Step1,3,sl0j3_4uf6,2026-07-26T09:32:35.687Z,-1,,,false,API returned 405
+Step2,4,ticket-summer2026,2026-07-26T09:32:40.784Z,47402,4548,38912,true,
+Step1,5,sl0j3_4uf6,2026-07-26T09:33:33.370Z,-1,,,false,API returned 405
+Step2,6,ticket-summer2026,2026-07-26T09:33:39.162Z,48137,3891,37989,true,
+Step1,7,sl0j3_4uf6,2026-07-26T09:34:32.268Z,-1,,,false,API returned 405
+Step2,8,ticket-summer2026,2026-07-26T09:34:37.289Z,47875,3156,37896,true,
+Step1,9,sl0j3_4uf6,2026-07-26T09:35:30.321Z,-1,,,false,API returned 405
+Step2,10,ticket-summer2026,2026-07-26T09:35:35.630Z,58154,3719,48360,true,
+Step1,1,sl0j3_4uf6,2026-07-26T09:43:09.979Z,43,,,true,
+Step2,2,ticket-summer2026,2026-07-26T09:43:15.424Z,42199,3074,32029,true,
+Step1,3,sl0j3_4uf6,2026-07-26T09:44:02.642Z,56,,,true,
+Step2,4,ticket-summer2026,2026-07-26T09:44:07.848Z,47833,3356,37098,true,
+Step1,5,sl0j3_4uf6,2026-07-26T09:45:00.793Z,47,,,true,
+Step2,6,ticket-summer2026,2026-07-26T09:45:05.802Z,53669,5589,36259,true,
+Step1,7,sl0j3_4uf6,2026-07-26T09:46:04.658Z,46,,,true,
+Step2,8,ticket-summer2026,2026-07-26T09:46:09.740Z,42252,5646,32254,true,
+Step1,9,sl0j3_4uf6,2026-07-26T09:46:58.160Z,48,,,true,
+Step2,10,ticket-summer2026,2026-07-26T09:47:03.028Z,52888,4672,38457,true,
+Step1,1,sl0j3_4uf6,2026-07-26T09:51:58.402Z,87,,,true,
+Step2,2,ticket-summer2026,2026-07-26T09:52:03.677Z,52860,2683,40757,true,
+Step1,3,sl0j3_4uf6,2026-07-26T09:53:01.555Z,50,,,true,
+Step2,4,ticket-summer2026,2026-07-26T09:53:06.688Z,59096,3189,44290,true,
+Step1,5,sl0j3_4uf6,2026-07-26T09:54:10.893Z,44,,,true,
+Step2,6,ticket-summer2026,2026-07-26T09:54:15.895Z,58526,5142,46881,true,
+Step1,7,sl0j3_4uf6,2026-07-26T09:55:19.462Z,41,,,true,
+Step2,8,ticket-summer2026,2026-07-26T09:55:24.773Z,47585,4014,38671,true,
+Step1,9,sl0j3_4uf6,2026-07-26T09:56:17.482Z,56,,,true,
+Step2,10,ticket-summer2026,2026-07-26T09:56:22.450Z,58019,4230,44341,true,

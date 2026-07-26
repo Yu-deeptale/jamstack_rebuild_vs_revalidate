@@ -1,0 +1,3 @@
+﻿name = "sys-jamstack"
+pages_build_output_dir = ".next"
+compatibility_date = "2026-07-25"
