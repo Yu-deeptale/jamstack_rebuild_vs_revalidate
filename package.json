@@ -7,6 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "check:measure": "node --check scripts/measure.js",
+    "measure": "node scripts/run-measurement.js",
+    "test:update": "node scripts/test-update.js",
+    "list:articles": "node scripts/list-articles.js",
     "deploy:pages": "wrangler pages deploy .next --commit-dirty=true",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
